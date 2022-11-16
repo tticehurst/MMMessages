@@ -17,13 +17,12 @@ h1#MMMessageContent{
   font-family: "vt323";
   font-size:3rem;
   color:rgb(255,0,0);
-  white-space: nowrap;
 
   position: absolute;
   top: 0;
   left: 50%;
   transform: translate(-50%, -50%);
-
+  width: 100vw;
 
   animation: flash 2.5s;
   animation-iteration-count: infinite;

@@ -35,7 +35,7 @@ module.exports = NodeHelper.create({
       reply.send(oldMessage);
     });
 
-    fastify.post("/cancelMessage", (_req, reply) => {
+    fastify.get("/cancelMessage", (_req, reply) => {
       this.sendSocketNotification("SetMessage", "");
       oldMessage = "";
       reply.send("Message cancelled");

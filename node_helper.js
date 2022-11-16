@@ -8,7 +8,7 @@ let oldMessage = undefined;
 module.exports = NodeHelper.create({
   async socketNotificationReceived(id) {
     if (id === "GetLastMessage") {
-      const lastMessage = (await axios.get("http://localhost:8081/lastMessage")).data;
+      const lastMessage = (await axios.get("http://127.0.0.1:8081/lastMessage")).data;
       this.sendSocketNotification("SetMessage", lastMessage || "");
     }
   },

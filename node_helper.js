@@ -4,11 +4,12 @@ const axios = require("axios");
 const logger = require("logger");
 
 let oldMessage = undefined;
+const port = global.config.port + 1;
 
 module.exports = NodeHelper.create({
   async socketNotificationReceived(id) {
     if (id === "GetLastMessage") {
-      const lastMessage = (await axios.get("http://127.0.0.1:8081/lastMessage")).data;
+      const lastMessage = (await axios.get(`http://127.0.0.1:${port}/lastMessage`)).data;
       this.sendSocketNotification("SetMessage", lastMessage || "");
     }
   },
@@ -41,6 +42,6 @@ module.exports = NodeHelper.create({
       reply.send("Message cancelled");
     });
 
-    fastify.listen({ port: global.config.port + 1, host: "0.0.0.0" });
+    fastify.listen({ port: port, host: "0.0.0.0" });
   },
 });

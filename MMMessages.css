@@ -25,5 +25,5 @@ h1#MMMessageContent{
   width: 100vw;
 
   animation: flash 2.5s;
-  animation-iteration-count: infinite;
+  animation-iteration-count: 5;
 }

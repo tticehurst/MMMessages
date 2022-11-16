@@ -18,7 +18,7 @@ h1#MMMessageContent{
   font-size:3rem;
   color:rgb(255,0,0);
   position: absolute;
-  top: 50%;
+  top: 0;
   left: 50%;
   transform: translate(-50%, -50%);
 

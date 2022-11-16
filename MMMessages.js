@@ -10,7 +10,7 @@ Module.register("MMMessages", {
   },
 
   getTemplate() {
-    return "Messages.njk";
+    return "MMMessages.njk";
   },
 
   getStyles() {

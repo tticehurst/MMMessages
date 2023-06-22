@@ -1,22 +1,22 @@
-@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
-@keyframes flash{
+@import url("https://fonts.googleapis.com/css2?family=VT323&display=swap");
+@keyframes flash {
   0% {
-      opacity: 0;
-    }
+    opacity: 0;
+  }
 
-    50% {
-      opacity: 1.0;
-    }
+  50% {
+    opacity: 1;
+  }
 
-    100% {
-      opacity: 0;
-    }
-
+  100% {
+    opacity: 0;
+  }
 }
-h1#MMMessageContent{
+h1#MMMessageContent {
+  z-index: 9999;
   font-family: "vt323";
-  font-size:3rem;
-  color:rgb(255,0,0);
+  font-size: 3rem;
+  color: rgb(255, 0, 0);
 
   position: absolute;
   top: 0;

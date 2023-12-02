@@ -1,1 +1,6 @@
-<h1 id="MMMessageContent">{{message}}</h1>
+<div id="MMMessageContent">
+{% for msg in messages%}
+<span>{{msg}}</span>
+{% endfor %}
+<span>{{message}}</span>
+</div>

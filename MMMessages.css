@@ -12,18 +12,30 @@
     opacity: 0;
   }
 }
-h1#MMMessageContent {
+div#MMMessageContent * {
   z-index: 9999;
   font-family: "vt323";
   font-size: 3rem;
   color: rgb(255, 0, 0);
 
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 100vw;
-
   animation: flash 2.5s;
   animation-iteration-count: 5;
+  margin: 0;
+  padding: 0;
+}
+
+div#MMMessageContent {
+  z-index: 9999;
+
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  gap: 0;
 }

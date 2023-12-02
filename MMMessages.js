@@ -1,12 +1,18 @@
 Module.register("MMMessages", {
+  defaults: {
+    events: []
+  },
+
   getTemplateData() {
     return {
       message: this.message,
+      messages: this.messages
     };
   },
 
   start() {
     this.sendSocketNotification("GetLastMessage");
+    this.sendSocketNotification("UpdateConfig", this.config);
   },
 
   getTemplate() {
@@ -22,5 +28,9 @@ Module.register("MMMessages", {
       this.message = payload;
       this.updateDom(300);
     }
-  },
+    if (id === "SetMessages") {
+      this.messages = payload;
+      this.updateDom(300);
+    }
+  }
 });
